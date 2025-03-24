@@ -7,7 +7,6 @@ import { IoSunnySharp } from "react-icons/io5";
 import { IoMoonSharp } from "react-icons/io5";
 
 const Header = ({ setIsMenuOpen, isMenuOpen }) => {
-  // const darkMode = false;
   const { dark, setDark } = useDark();
   return (
     <div className="Header bg-greyish-blue-light h-20 p-2 flex justify-end items-center gap-5 overflow-x-hidden dark:bg-bg-dark">
