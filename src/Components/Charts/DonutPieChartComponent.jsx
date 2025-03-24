@@ -16,41 +16,41 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
+const chartData = [
+  { browser: "chrome", visitors: 275, fill: "#4285F4" }, // Chrome (Blue)
+  { browser: "safari", visitors: 200, fill: "#0078D4" }, // Safari (Blue)
+  { browser: "firefox", visitors: 287, fill: "#FF7139" }, // Firefox (Orange)
+  { browser: "edge", visitors: 173, fill: "#00A4A6" }, // Edge (Teal)
+  { browser: "other", visitors: 190, fill: "#F1A7B2" },
+];
+
+const chartConfig = {
+  visitors: {
+    label: "Visitors",
+  },
+  chrome: {
+    label: "Chrome",
+    color: "red",
+  },
+  safari: {
+    label: "Safari",
+    color: "#FF7139",
+  },
+  firefox: {
+    label: "Firefox",
+    color: "#FF7139",
+  },
+  edge: {
+    label: "Edge",
+    color: "#FF7139",
+  },
+  other: {
+    label: "Other",
+    color: "hsl(var(--chart-5))",
+  },
+};
 
 const DonutPieChartComponent = () => {
-  const chartData = [
-    { browser: "chrome", visitors: 275, fill: "#4285F4" }, // Chrome (Blue)
-    { browser: "safari", visitors: 200, fill: "#0078D4" }, // Safari (Blue)
-    { browser: "firefox", visitors: 287, fill: "#FF7139" }, // Firefox (Orange)
-    { browser: "edge", visitors: 173, fill: "#00A4A6" }, // Edge (Teal)
-    { browser: "other", visitors: 190, fill: "#F1A7B2" },
-  ];
-
-  const chartConfig = {
-    visitors: {
-      label: "Visitors",
-    },
-    chrome: {
-      label: "Chrome",
-      color: "red",
-    },
-    safari: {
-      label: "Safari",
-      color: "#FF7139",
-    },
-    firefox: {
-      label: "Firefox",
-      color: "#FF7139",
-    },
-    edge: {
-      label: "Edge",
-      color: "#FF7139",
-    },
-    other: {
-      label: "Other",
-      color: "hsl(var(--chart-5))",
-    },
-  };
   const totalVisitors = React.useMemo(() => {
     return chartData.reduce((acc, curr) => acc + curr.visitors, 0);
   }, []);

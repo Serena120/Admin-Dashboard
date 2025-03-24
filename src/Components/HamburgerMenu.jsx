@@ -83,7 +83,7 @@ const HamburgerMenu = ({ setIsMenuOpen, isMenuOpen }) => {
             </li>
           </Link>
 
-          <Link to={"/settings"}>
+          <Link to={"/settings/account"}>
             <li
               className={`flex items-center gap-2 ${
                 selectedItem === "settings" ||

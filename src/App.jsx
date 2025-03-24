@@ -8,6 +8,12 @@ import Settings from "./Components/Settings";
 import Inbox from "./Components/Inbox";
 import Notifications from "./Components/Notifications";
 import { ThemeProvider } from "./Components/Context/ThemeContext";
+import AccSettings from "./Components/SettingsComponents/AccSettings";
+import Preferences from "./Components/SettingsComponents/Preferences";
+import NotificationSettings from "./Components/SettingsComponents/NotificationSettings";
+import SecuritySettings from "./Components/SettingsComponents/SecuritySettings";
+import PrivacySettings from "./Components/SettingsComponents/PrivacySettings";
+import Help from "./Components/SettingsComponents/Help";
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -35,9 +41,16 @@ function App() {
               element={<Notifications isMenuOpen={isMenuOpen} />}
             />
             <Route
-              path="/settings/*"
+              path="/settings"
               element={<Settings isMenuOpen={isMenuOpen} />}
-            />
+            >
+              <Route path="account" element={<AccSettings />} />
+              <Route path="preferences" element={<Preferences />} />
+              <Route path="notifSettings" element={<NotificationSettings />} />
+              <Route path="security" element={<SecuritySettings />} />
+              <Route path="privacy" element={<PrivacySettings />} />
+              <Route path="help" element={<Help />} />
+            </Route>
           </Routes>
         </BrowserRouter>
       </div>

@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import { TrendingUp } from "lucide-react";
 import {
   Bar,
   BarChart,
@@ -10,49 +9,43 @@ import {
   YAxis,
 } from "recharts";
 
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
 
-const HorizontalChart = () => {
-  const chartData = [
-    { month: "January", desktop: 186, mobile: 80 },
-    { month: "February", desktop: 305, mobile: 200 },
-    { month: "March", desktop: 237, mobile: 120 },
-    { month: "April", desktop: 73, mobile: 190 },
-    { month: "May", desktop: 209, mobile: 130 },
-    { month: "June", desktop: 214, mobile: 140 },
-    { month: "July", desktop: 214, mobile: 140 },
-    { month: "August", desktop: 214, mobile: 140 },
-    { month: "September", desktop: 214, mobile: 140 },
-    { month: "October", desktop: 214, mobile: 140 },
-    { month: "November", desktop: 214, mobile: 140 },
-    { month: "December", desktop: 214, mobile: 140 },
-  ];
-  const chartConfig = {
-    desktop: {
-      label: "Desktop",
-      color: "hsl(var(--chart-1))",
-    },
-    mobile: {
-      label: "Mobile",
-      color: "hsl(var(--chart-2))",
-    },
-    label: {
-      color: "hsl(var(--background))",
-    },
-  };
+const chartData = [
+  { month: "January", desktop: 186, mobile: 80 },
+  { month: "February", desktop: 305, mobile: 200 },
+  { month: "March", desktop: 237, mobile: 120 },
+  { month: "April", desktop: 73, mobile: 190 },
+  { month: "May", desktop: 209, mobile: 130 },
+  { month: "June", desktop: 214, mobile: 140 },
+  { month: "July", desktop: 214, mobile: 140 },
+  { month: "August", desktop: 214, mobile: 140 },
+  { month: "September", desktop: 214, mobile: 140 },
+  { month: "October", desktop: 214, mobile: 140 },
+  { month: "November", desktop: 214, mobile: 140 },
+  { month: "December", desktop: 214, mobile: 140 },
+];
 
+const chartConfig = {
+  desktop: {
+    label: "Desktop",
+    color: "hsl(var(--chart-1))",
+  },
+  mobile: {
+    label: "Mobile",
+    color: "hsl(var(--chart-2))",
+  },
+  label: {
+    color: "hsl(var(--background))",
+  },
+};
+
+const HorizontalChart = () => {
   return (
     <Card className="flex flex-col h-full dark:bg-gray-900">
       <CardHeader className="border-2 pb-2 border-custom-white border-b-greyish-blue-dark dark:border-gray-900 dark:border-b-border-dark dark:text-text-dark">
@@ -70,7 +63,6 @@ const HorizontalChart = () => {
               left: 20,
               bottom: 20,
             }}
-            // style={{ height: "600px" }}
           >
             <CartesianGrid horizontal={false} />
             <YAxis

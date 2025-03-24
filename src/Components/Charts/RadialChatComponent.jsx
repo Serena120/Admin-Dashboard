@@ -16,26 +16,27 @@ import {
   ChartTooltipContent,
 } from "@/components/ui/chart";
 
-const RadialChatComponent = () => {
-  const chartData = [
-    { month: "January", desktop: 186, mobile: 160 },
-    { month: "February", desktop: 185, mobile: 170 },
-    { month: "March", desktop: 207, mobile: 180 },
-    { month: "April", desktop: 173, mobile: 160 },
-    { month: "May", desktop: 160, mobile: 190 },
-    { month: "June", desktop: 174, mobile: 204 },
-  ];
+const chartData = [
+  { month: "January", desktop: 186, mobile: 160 },
+  { month: "February", desktop: 185, mobile: 170 },
+  { month: "March", desktop: 207, mobile: 180 },
+  { month: "April", desktop: 173, mobile: 160 },
+  { month: "May", desktop: 160, mobile: 190 },
+  { month: "June", desktop: 174, mobile: 204 },
+];
 
-  const chartConfig = {
-    desktop: {
-      label: "Desktop",
-      color: "hsl(var(--chart-1))",
-    },
-    mobile: {
-      label: "Mobile",
-      color: "hsl(var(--chart-2))",
-    },
-  };
+const chartConfig = {
+  desktop: {
+    label: "Desktop",
+    color: "hsl(var(--chart-1))",
+  },
+  mobile: {
+    label: "Mobile",
+    color: "hsl(var(--chart-2))",
+  },
+};
+
+const RadialChatComponent = () => {
   return (
     <Card className="dark:bg-gray-900">
       <CardHeader className="items-center pb-4">

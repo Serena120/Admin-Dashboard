@@ -13,7 +13,7 @@ const Notif = ({
 }) => {
   return (
     <div className="notification ">
-      {read === false ? (
+      {read === true ? (
         <Card
           className="rounded-[4px] bg-custom-white dark:bg-gray-900 dark:text-text-dark p-0 ml-2 mr-6 cursor-pointer"
           onClick={toggleRead}
